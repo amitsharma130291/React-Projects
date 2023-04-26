@@ -6,7 +6,7 @@ const Directory = ({categories}) =>{
         {
           categories.map(({id, title, imageUrl}) => {
             return(
-              <CategoryItem id={id} title={title} imageUrl={imageUrl}/>
+              <CategoryItem key={id} title={title} imageUrl={imageUrl}/>
             )
           })
         }        
