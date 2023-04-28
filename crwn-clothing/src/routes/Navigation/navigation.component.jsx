@@ -8,7 +8,7 @@ const Navigation = () => {
                 <Link to="/" className="logo-container"><CrownLogo /></Link>           
                 <div className="nav-links-container">
                     <Link className="nav-link" to="/shop">Shop</Link>
-                    <Link className="nav-link" to="/sign-in">Sign In</Link>
+                    <Link className="nav-link" to="auth">Sign In</Link>
                 </div>
             </div>
             <Outlet/>           

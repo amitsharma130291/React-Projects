@@ -16,7 +16,6 @@ const SignUpForm = () => {
     const { email, password, confirmPassword, displayName } = formFields
 
     const setSignUpFormEmpty = () => {
-        console.log("inside empty")
         setFormFields(defaultFormFields)
     }
     
