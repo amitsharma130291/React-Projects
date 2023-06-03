@@ -1,0 +1,44 @@
+.testimonial-section{
+    margin: 4rem 0
+}
+
+.testimonial-grid{   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px
+}
+
+.heading{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.testimony{
+    text-align: center;
+    border: 0.1px solid lightgray;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+
+.testimony .image{
+    height : 2.5rem;
+    width : 2.5rem;
+    border-radius: 50%;
+
+}
+
+.testimony-heading{
+    font-weight: 800;
+}
+
+.personalDetails{
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.personalDetails p{
+    text-align: left;
+}

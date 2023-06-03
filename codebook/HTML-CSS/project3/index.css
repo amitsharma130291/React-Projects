@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+}
+
+.header{
+    grid-column: span 2;
+    text-align: center;
+    border: 1px solid black
+}
+
+.side-bar{
+    grid-row: span 2;
+    border: 1px solid black;
+    
+}
+
+.videos{
+    border: 1px solid black;
+}
+
+.tags{
+    border : 1px solid black
+}

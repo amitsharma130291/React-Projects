@@ -1,0 +1,14 @@
+.CTAButton{ 
+        padding: 0.625rem 1.25rem;
+        background-color: rgb(29 78 216);
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        border: 0 solid #e5e7eb;
+        font-weight: 500;
+    }
+
+    .CTAButton:hover{
+        cursor: pointer;
+        background-color: #1a46c2;
+    }
