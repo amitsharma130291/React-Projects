@@ -1,19 +1,22 @@
 import React from 'react'
 import Hero from "./components/Hero"
-import styles from "./HomePage.module.css"
-import FeaturedProducts from './components/featured-products'
+import FeaturedProducts from './components/Featured-Products'
 import Testimonials from './components/Testimonials/Testimonials'
 import Faq from './components/Faq/Faq'
+import styled from "styled-components"
 
 
 export const HomePage = () => {
   return (
-    <main className={styles.home}> 
+    <HomeContainer> 
       <Hero />
       <FeaturedProducts />
       <Testimonials />
       <Faq />
-    </main>
+    </HomeContainer>
   )
 }
 
+const HomeContainer = styled.main`
+        padding: 10px     
+`

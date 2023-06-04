@@ -1,20 +1,22 @@
 import React from 'react'
-import styles from "./Hero.module.css"
+import { HeroSectionContainer, HeroText, HeroImage } from "./Hero.style"
 import heroImg from "../../../../assets/images/hero.avif"
 import CTAButton from "../../../../components/Other/CTA-Button"
+import { useNavigate } from 'react-router-dom'
 
 function Hero() {
+  const navigate = useNavigate()
   return (
-    <section className={ styles.heroSection }>
-        <div className={styles.text}>
+    <HeroSectionContainer>
+        <HeroText>
             <h1>The Ultimate eBook Store</h1>
             <p>CodeBook is the world's most popular and authoritative source for computer science ebooks. Find ratings and access to the newest books digitally.</p>
-            <CTAButton text="Explore eBooks" />          
-        </div>
-        <div className={styles.heroImage}>
+            <CTAButton onClick={() => navigate("/products")} text="Explore eBooks" />          
+        </HeroText>
+        <HeroImage>
             <img src={heroImg} alt="hero image" />
-        </div>
-    </section>
+        </HeroImage>
+    </HeroSectionContainer>
   )
 }
 

@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import ProductCard from '../../../../components/Elements/ProductCard/ProductCard'
-import styles from "./featured-products.module.css"
+import { FeaturedContainer, FeatureProductsGrid } from "./featured-products.style.js"
+import axiosInstance from "../../../../axios/config"
 
 function FeaturedProducts() {
   const [ featuredProducts, setFeaturedProducts ] = useState([])
 
   useEffect(()=> {
      async function fetchProducts(){
-        const productsResponse = await fetch("http://localhost:8000/featured_products")
-        const products = await productsResponse.json()
-        setFeaturedProducts(products)
+        const productsResponse = await axiosInstance.get("/featured_products")
+        setFeaturedProducts(productsResponse.data)
      }
 
      fetchProducts()
-
   }, [])
 
   return (
-    <section className={styles["featured"]}>
-      <h1 className={styles["featured-heading"]}>Featured eBooks</h1>
-       <div className={styles["featured-products"]}>
+    <FeaturedContainer>
+      <h1 className="featured-heading">Featured eBooks</h1>
+       <FeatureProductsGrid>
         {
           featuredProducts.map((product)=>{
             return( <ProductCard product = {product} key={product.id} /> )
           })
         }                    
-     </div>
-    </section>
-   
+     </FeatureProductsGrid>
+    </FeaturedContainer>   
   )
 }
 
